@@ -1,6 +1,6 @@
-public class Enemy {
-    private int health;
-    private int damage;
+public abstract class Enemy {
+    protected int health;
+    protected int damage;
     
     public Enemy(int health, int damage) {
         this.health = health;
@@ -10,4 +10,6 @@ public class Enemy {
     public void attack(Player player) {
         player.takeDamage(damage);
     }
+    
+    public abstract void specialAttack(Player player);
 }
