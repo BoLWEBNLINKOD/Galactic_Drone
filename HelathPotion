@@ -1,0 +1,12 @@
+public class HealthPotion implements Item {
+    private int healAmount;
+    
+    public HealthPotion(int healAmount) {
+        this.healAmount = healAmount;
+    }
+    
+    @Override
+    public void use(Player player) {
+        player.takeDamage(-healAmount);
+    }
+}
