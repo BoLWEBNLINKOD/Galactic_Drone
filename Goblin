@@ -1,0 +1,11 @@
+public class Goblin extends Enemy {
+    public Goblin() {
+        super(30, 5);
+    }
+    
+    @Override
+    public void specialAttack(Player player) {
+        player.takeDamage(damage * 2);
+        System.out.println("Goblin performs a sneaky attack!");
+    }
+}
