@@ -1,12 +1,15 @@
 public class Main {
     public static void main(String[] args) {
         Player player = new Player(100);
-        Enemy enemy = new Enemy(50, 10);
+        Enemy goblin = new Goblin();
+        Enemy orc = new Orc();
         HealthPotion potion = new HealthPotion(20);
         LevelManager levelManager = new LevelManager();
         
-        levelManager.addEnemy(enemy);
-        enemy.attack(player);
+        levelManager.addEnemy(goblin);
+        levelManager.addEnemy(orc);
+        goblin.attack(player);
+        orc.specialAttack(player);
         player.getInventory().addItem(potion);
         potion.use(player);
     }
