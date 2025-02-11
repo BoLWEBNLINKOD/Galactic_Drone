@@ -1,0 +1,13 @@
+public class Main {
+    public static void main(String[] args) {
+        Player player = new Player(100);
+        Enemy enemy = new Enemy(50, 10);
+        HealthPotion potion = new HealthPotion(20);
+        LevelManager levelManager = new LevelManager();
+        
+        levelManager.addEnemy(enemy);
+        enemy.attack(player);
+        player.getInventory().addItem(potion);
+        potion.use(player);
+    }
+}
