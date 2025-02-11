@@ -1,0 +1,23 @@
+public class Player {
+    private int health;
+    private int experience;
+    private Inventory inventory;
+    
+    public Player(int health) {
+        this.health = health;
+        this.experience = 0;
+        this.inventory = new Inventory();
+    }
+    
+    public void takeDamage(int damage) {
+        this.health -= damage;
+    }
+    
+    public void gainExperience(int xp) {
+        this.experience += xp;
+    }
+    
+    public Inventory getInventory() {
+        return inventory;
+    }
+}
