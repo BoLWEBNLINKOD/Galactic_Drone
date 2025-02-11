@@ -1,0 +1,21 @@
+import java.util.ArrayList;
+import java.util.List;
+
+public class LevelManager {
+    private int currentLevel;
+    private List<Enemy> enemies;
+    
+    public LevelManager() {
+        this.currentLevel = 1;
+        this.enemies = new ArrayList<>();
+    }
+    
+    public void nextLevel() {
+        currentLevel++;
+        enemies.clear();
+    }
+    
+    public void addEnemy(Enemy enemy) {
+        enemies.add(enemy);
+    }
+}
